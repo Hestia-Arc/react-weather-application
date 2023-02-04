@@ -1,0 +1,8 @@
+#city {
+    text-transform: capitalize;
+  }
+  #weather,
+  #wind {
+    margin-top: -0.8em;
+    text-transform: capitalize;
+  }

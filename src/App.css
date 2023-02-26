@@ -1,6 +1,6 @@
-.App {
-  /* text-align: center; */
-}
+/* .App {
+  text-align: center;
+} */
 
 .container {
   display: flex;
@@ -44,4 +44,41 @@ h1 {
   color: rgb(139, 69, 172);
   font-size: 5em;
   margin-top: -0.4em;
+}
+
+/* info */
+.city {
+  text-transform: capitalize;
+}
+.weather,
+.wind {
+  margin-top: -0.8em;
+  text-transform: capitalize;
+}
+
+/* search */
+.input-group {
+  width: 400px;
+  margin-top: 1em;
+}
+.input {
+  padding: 8px 10px;
+}
+form {
+  display: flex;
+}
+.button-Up {
+  height: 35px;
+  margin-left: 9px;
+  padding: 0 16px;
+}
+
+/* source */
+.source {
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: -2em;
+}
+.src_link {
+  margin-right: 0.2em;
 }

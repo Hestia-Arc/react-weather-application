@@ -39,7 +39,7 @@ function App() {
 
   function search() {
     const apiKey = '1c7c2130c641449415ec3a6426b1d986';
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -47,7 +47,7 @@ function App() {
   if (ready) {
 
   return (
-    <div className="App container border">
+    <div className="app">
       
       {/* Search */}
       <div>
@@ -84,8 +84,8 @@ function App() {
           <span>{Math.round(data.temp)}</span>°
           <sup>
             <span className="letters">
-              <a href="/" >C|</a>
-              <a href="/" >F</a>
+              <span>°C|</span>
+              <span>F</span>
             </span>
           </sup>
       </div>

@@ -1,21 +1,29 @@
 /* .App {
   text-align: center;
 } */
-
-.container {
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(https://wall2mob.com/cx/m/t2/33760-7.jpg);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+}
+.app {
   display: flex;
   flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: rgb(206, 182, 190);
-  width: 36%;
-  height: 27rem;
-  margin: auto;
-  margin-top: 3em;
-  padding: 2rem 3rem;
-  color: rgb(136, 67, 67);
+  background-color: rgb(255, 255, 255, 0.04);
+  width: 162%;
+  margin-left: 20px;
+  height: 35rem;
+  padding: 2rem;
+  color: #fff;
   border-radius: 10px;
-  box-shadow: 1px 0px 12px 1px rgb(61 34 58 / 75%);
+  box-shadow: -1px 4px 28px 0px rgb(0 0 0);
 }
 hr {
   margin-left: 0.4em;
@@ -34,21 +42,22 @@ a {
 
 /* Temp */
 h1 {
-  color: rgb(139, 69, 172);
+  color: #fff;
 }
 .letters {
   font-size: 0.5em;
 }
 .degree {
   padding-left: 0.5em;
-  color: rgb(139, 69, 172);
+  color: #fff;
   font-size: 5em;
   margin-top: -0.4em;
 }
 
 /* info */
 .city {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  margin-bottom: -9px;
 }
 .weather,
 .wind {
@@ -58,8 +67,8 @@ h1 {
 
 /* search */
 .input-group {
-  width: 400px;
-  margin-top: 1em;
+  width: 320px;
+  margin-top: 15px;
 }
 .input {
   padding: 8px 10px;
@@ -71,6 +80,10 @@ form {
   height: 35px;
   margin-left: 9px;
   padding: 0 16px;
+  border-radius: 4px;
+    border-style: none;
+    color: #fff;
+    background: darkorange;
 }
 
 /* source */
@@ -81,4 +94,42 @@ form {
 }
 .src_link {
   margin-right: 0.2em;
+}
+
+/* Media Queries */
+@media screen and (max-width:768px) {
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+  }
+  .app{
+    margin: 0 auto;
+    margin-left: -19px;
+    width: 100%;
+    height: 29rem;
+    padding: 20px;
+  }
+  .degree {
+    margin-top: -13px;
+    font-size: 3.4rem;
+  }
+  .input-group {
+    width: 223px;
+    margin: 5px 2px;
+  }
+  .input {
+    padding: 8px 5px;
+    width: 109px;
+    border-style: none;
+    border-radius: 4px;
+  }
+  .button-Up {
+    height: 33px;
+    border-radius: 4px;
+    border-style: none;
+    color: #fff;
+    background: darkorange;
+  }
 }

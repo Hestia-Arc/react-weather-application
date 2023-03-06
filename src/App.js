@@ -6,6 +6,7 @@ import './App.css';
 import Forecast from "./components/Forecast";
 import Source from "./components/Source";
 import FormatDate from './components/FormatDate';
+import WeatherIcon from './components/WeatherIcon'
 
 function App() {
 
@@ -17,12 +18,14 @@ function App() {
       console.log(response.data);
       setData({
         date: new Date(response.data.dt * 1000),
-        icon: 'http://openweathermap.org/img/wn/10d@2x.png',
-        // http://openweathermap.org/img/w/${response.data.weather[0].icon}@2x.png`,
+        icon:  
+        response.data.weather[0].icon,
+        // 'http://openweathermap.org/img/wn/10d@2x.png',
         temp: response.data.main.temp,
         wind: response.data.wind.speed,
         city: response.data.name,
-        description: response.data.weather[0].description
+        description: response.data.weather[0].description,
+        coords: response.data.coord
       });
       
       setReady(true);
@@ -71,7 +74,7 @@ function App() {
 
       
       {/* Info */}
-      <div>
+      <div className='info-container'>
         <h1 className='city'>{data.city}</h1>
         <p className='date'><FormatDate date={data.date}/></p>
         <p className='weather'>{data.description} </p>
@@ -80,11 +83,12 @@ function App() {
 
     {/* Temp */}
       <div className="degree">
-          <span></span>
+        {/* <span>{data.icon}</span> */}
+          <span><WeatherIcon code={data.icon}/></span>
           <span>{Math.round(data.temp)}</span>°
           <sup>
             <span className="letters">
-              <span>°C|</span>
+              <span>C|</span>
               <span>F</span>
             </span>
           </sup>
@@ -92,7 +96,7 @@ function App() {
 
 
       <hr />
-      <Forecast />
+      <Forecast value={data.coords}/>
       <hr />
       <Source />
   </div>

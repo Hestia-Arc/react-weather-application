@@ -17,17 +17,16 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: rgb(255, 255, 255, 0.04);
-  width: 162%;
-  margin-left: 20px;
+  /* width: 100%; */
   height: 35rem;
   padding: 2rem;
   color: #fff;
   border-radius: 10px;
   box-shadow: -1px 4px 28px 0px rgb(0 0 0);
 }
-hr {
+/* hr {
   margin-left: 0.4em;
-}
+} */
 a {
   text-decoration: none;
 }
@@ -48,13 +47,16 @@ h1 {
   font-size: 0.5em;
 }
 .degree {
-  padding-left: 0.5em;
   color: #fff;
   font-size: 5em;
-  margin-top: -0.4em;
+  margin-top: 10px;
+  height: 7rem;
 }
 
 /* info */
+.info-container {
+  height: 9rem;
+}
 .city {
   text-transform: uppercase;
   margin-bottom: -9px;
@@ -90,14 +92,35 @@ form {
 .source {
   text-align: center;
   margin-bottom: 0;
-  margin-left: -2em;
+}
+.source-text {
+  margin-left: 4px;
 }
 .src_link {
-  margin-right: 0.2em;
+  text-decoration: none;
+  color: orange;
 }
 
+/* forecast */
+.forecast {
+  border: 1px solid #fff;
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+     border: 1px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
 /* Media Queries */
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   body {
       display: flex;
       justify-content: center;
@@ -106,8 +129,6 @@ form {
   }
   .app{
     margin: 0 auto;
-    margin-left: -19px;
-    width: 100%;
     height: 29rem;
     padding: 20px;
   }
@@ -131,5 +152,11 @@ form {
     border-style: none;
     color: #fff;
     background: darkorange;
+  }
+  .forecast {
+    width: 84%;
+  }
+  .source {
+    width: 84%;
   }
 }

@@ -3,16 +3,14 @@ import React from "react";
 
 export default function Source() {
   return (
-    <div>
-      <p className="source">
+    <div className="source">
         <a
           className="src_link"
           href="https://github.com/Hestia-Arc/Shecodes-Weather-App/tree/master"
         >
-          Open-source code
+          Open-sourced on GitHub
         </a>
-        by Esther
-      </p>
+        <span className="source-text">by Esther</span>
     </div>
   );
 }

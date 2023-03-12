@@ -51,6 +51,7 @@ h1 {
   font-size: 5em;
   margin-top: 10px;
   height: 7rem;
+  display: flex;
 }
 
 /* info */
@@ -103,21 +104,29 @@ form {
 
 /* forecast */
 .forecast {
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   height: 15rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .box {
-     border: 1px solid blue;
+     /* border: 1px solid blue; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
+/* .f-icon {
+  width: 85%;
+} */
+.f-tag {
 
+}
+.f-temp-container {
+
+}
 
 /* Media Queries */
 @media screen and (max-width:767px) {
@@ -135,6 +144,7 @@ form {
   .degree {
     margin-top: -13px;
     font-size: 3.4rem;
+    align-items: center;
   }
   .input-group {
     width: 223px;
@@ -154,9 +164,9 @@ form {
     background: darkorange;
   }
   .forecast {
-    width: 84%;
+    width: 100%;
   }
   .source {
-    width: 84%;
+    width: 100%;
   }
 }

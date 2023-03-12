@@ -15,7 +15,7 @@ function App() {
   let [city, setCity] = useState('Tokyo');
 
   function handleResponse(response) {
-      console.log(response.data);
+      // console.log(response.data);
       setData({
         date: new Date(response.data.dt * 1000),
         icon:  
@@ -84,8 +84,8 @@ function App() {
     {/* Temp */}
       <div className="degree">
         {/* <span>{data.icon}</span> */}
-          <span><WeatherIcon code={data.icon}/></span>
-          <span>{Math.round(data.temp)}</span>°
+          <WeatherIcon code={data.icon}/>
+          <div>{Math.round(data.temp)}</div>°
           <sup>
             <span className="letters">
               <span>C|</span>
